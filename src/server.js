@@ -8,8 +8,8 @@ const config = {
     port: 8000,
     username: 'admin',
     password: 'admin',
-    cluster: 'cluster0.28n6ded',
-    database: 'sample_airbnb',
+    cluster: 'cluster0.li0vfba',
+    database: 'Cashty'
 };
 
 mongoose.connect(`mongodb+srv://${config.username}:${config.password}@${config.cluster}.mongodb.net/${config.database}?retryWrites=true&w=majority`);
