@@ -8,7 +8,6 @@ const transactionSchema = new mongoose.Schema({
     description: {type: String}
 });
 
-
 const financeSchema = new mongoose.Schema({
     month: {type: Number, required: true},
     year: {type: Number, required: true},
@@ -37,7 +36,7 @@ const userSchema = new mongoose.Schema({
         expenses: {type: [transactionSchema], default: []},
 
         history: {type: [financeSchema], default: []}
-    } }
+    }, default: {}}
 });
 
 module.exports = userSchema;
