@@ -19,6 +19,13 @@ const financeSchema = new mongoose.Schema({
     savingTarget: {type: Number, default: 0}
 });
 
+const creditCardSchema = new mongoose.Schema({
+    cardNumber: {type: String, required: true},
+    creditorTitle: {type: String, required: true},
+    cvv: {type: Number, required: true},
+    expirationDate: {type: Date, required: true}
+})
+
 const userSchema = new mongoose.Schema({
     name: {type: String, required: true},
     email: {type: String, required: true},
@@ -36,7 +43,9 @@ const userSchema = new mongoose.Schema({
         expenses: {type: [transactionSchema], default: []},
 
         history: {type: [financeSchema], default: []}
-    }, default: {}}
+    }, default: {}},
+
+    creditCards: {type: [creditCardSchema], default: []}
 });
 
 module.exports = userSchema;
