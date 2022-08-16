@@ -88,7 +88,7 @@ Must validate the existency of a user in login
 - Return if sucess: A transactions structure array
 A method than returns all transactions of a determinate day
 
-###### /add_user
+####### /add_user
 - Method: post
 - Body values: A data like ```{name: "User Name", email: "user@example.com", password: "password"}```
 - Return if sucess: A new User structure
