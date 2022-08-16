@@ -88,12 +88,12 @@ Must validate the existency of a user in login
 - Return if sucess: A transactions structure array
 A method than returns all transactions of a determinate day
 
-####### /add_user
+###### /add_user
 - Method: post
 - Body values: A data like ```{name: "User Name", email: "user@example.com", password: "password"}```
 - Return if sucess: A new User structure
 
-######/user/\$userID/transactions/\$typeTransaction
+###### /user/\$userID/transactions/\$typeTransaction
 - Method: post
 - Body values: A transaction structure json
 - Params values: ```$userID = __id, $transactionType = 'earnings' or 'expenses'``` 
