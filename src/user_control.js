@@ -13,6 +13,15 @@ const createHistoryKey = (historyKey, transactionDate) => {
 }
 
 module.exports = {
+    getTransactionsEvent: (transactionsArray, date) => {
+        if (date !== null){
+            filteredTransactions = transactionsArray.filter(elem => {return date.getDate() === (new Date(elem.date)).getDate() &&
+                                                                            date.getMonth() === (new Date(elem.date)).getMonth() &&
+                                                                            date.getFullYear() === (new Date(elem.date).getFullYear())})
+            return filteredTransactions  
+        } else return transactionsArray;
+    },
+
     updateEarningEvent: (userItem, transaction) =>{
         const transactionDate = new Date(transaction.date);
         userItem.financeInfo.totalEarnings += transaction.amount;
